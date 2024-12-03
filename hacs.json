@@ -1,13 +1,5 @@
 {
-    "name": "HA Custom STT",
-    "content_in_root": false,
-    "domains": [
-        "stt"
-    ],
-    "country": [
-        "US",
-        "KR"
-    ],
+    "name": "RS-Tuned Speech-To-Text",
     "homeassistant": "2023.1.0",
     "render_readme": true
 }

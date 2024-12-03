@@ -1,19 +1,10 @@
 {
     "domain": "ha_custom_stt",
-    "name": "Ha Custom STT",
-    "version": "1.0",
-    "dependencies": [],
+    "name": "HA Speech-To-Text",
     "codeowners": [
         "@amaramusic"
     ],
-    "integration_type": "service",
-    "iot_class": "cloud_polling",
-    "requirements": [
-        "aiohttp",
-        "pydub",
-        "netifaces",
-        "requests",
-        "pydub",
-        "wave"
-    ]
+    "documentation": "https://github.com/mojokb/ha-custom-stt",
+    "iot_class": "cloud_push",
+    "version": "0.0.1"
 }

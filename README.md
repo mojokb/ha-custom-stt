@@ -13,5 +13,6 @@ This is a custom Speech-to-Text (STT) integration for Home Assistant.
 3. Restart Home Assistant.
 4. Add the following to your `configuration.yaml`:
    ```yaml
-   stt:
-     - platform: my_custom_stt
+stt:
+  - platform: ha_custom_stt
+    api_key: api_ky
