@@ -1,0 +1,18 @@
+{
+    "domain": "ha_custom_stt",
+    "name": "Ha Custom STT",
+    "version": "1.0",
+    "dependencies": [],
+    "codeowners": [
+        "@amaramusic"
+    ],
+    "integration_type": "helper",
+    "requirements": [
+        "aiohttp",
+        "pydub",
+        "netifaces",
+        "requests",
+        "pydub",
+        "wave"
+    ]
+}
