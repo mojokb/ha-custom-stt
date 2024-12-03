@@ -4,7 +4,7 @@
     "codeowners": [
         "@amaramusic"
     ],
-    "dependencies": [
+    "requirements": [
         "wave",
         "requests",
         "netifaces",
