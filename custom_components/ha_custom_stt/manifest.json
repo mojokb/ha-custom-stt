@@ -6,7 +6,7 @@
     "codeowners": [
         "@amaramusic"
     ],
-    "integration_type": "helper",
+    "integration_type": "service",
     "requirements": [
         "aiohttp",
         "pydub",
