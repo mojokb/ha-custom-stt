@@ -20,8 +20,6 @@ from homeassistant.components.stt import (
     SpeechResult,
     SpeechResultState,
 )
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import HomeAssistant
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -47,12 +45,12 @@ async def async_get_engine(hass, config, discovery_info=None):
 
 
 class RsTunedSTTProvider(Provider):
-    """The Azure STT API provider."""
+    """The RS-Tuned STT API provider."""
 
-    def __init__(self, hass: HomeAssistant, entry: ConfigEntry) -> None:
+    def __init__(self, hass, api_key) -> None:
         """Init Azure STT service."""
         self.name = "RS-Tuned STT"
-        self.api_key = entry.data[CONF_API_KEY]
+        self.api_key = api_key
         self._client = None
 
     @property
@@ -99,14 +97,14 @@ class RsTunedSTTProvider(Provider):
                 async with session.post(url, headers=headers, data=stream) as response:
                     if response.status != 200:
                         raise Exception(
-                            f"azure stt failed status={response.status} response={await response.text()}"
+                            f"rs-tuned stt failed status={response.status} response={await response.text()}"
                         )
 
                     response_json = await response.json()
-                    _LOGGER.debug("azure stt returned %s", response_json)
+                    _LOGGER.debug("rs-tuned stt returned %s", response_json)
 
                     if response_json["RecognitionStatus"] != "Success":
-                        raise Exception(f"azure stt failed response={response_json}")
+                        raise Exception(f"rs-tuned stt failed response={response_json}")
 
                     return SpeechResult(
                         response_json["DisplayText"],

@@ -1,6 +1,6 @@
 {
     "domain": "ha_custom_stt",
-    "name": "HA Speech-To-Text",
+    "name": "RS-Tuned Speech-To-Text",
     "codeowners": [
         "@amaramusic"
     ],
