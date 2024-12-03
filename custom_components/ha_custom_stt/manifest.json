@@ -4,6 +4,12 @@
     "codeowners": [
         "@amaramusic"
     ],
+    "dependencies": [
+        "wave",
+        "requests",
+        "netifaces",
+        "pydub"
+    ],
     "documentation": "https://github.com/mojokb/ha-custom-stt",
     "iot_class": "cloud_push",
     "version": "0.0.1"
